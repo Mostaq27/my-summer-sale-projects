@@ -43,9 +43,9 @@ function handleCLikBtn(target){
   if(total>200 && couponFieldValue == "SELL200"){
     const discount= total*0.2;
     console.log(discount);
-    document.getElementById('discount').innerText= discount;
+    document.getElementById('discount').innerText= discount.toFixed(2);
     const finalTotal = total- discount;
-    document.getElementById('final-total').innerText= finalTotal;
+    document.getElementById('final-total').innerText= finalTotal.toFixed(2);
   }
 })  
 
