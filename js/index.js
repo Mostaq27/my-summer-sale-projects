@@ -6,7 +6,7 @@ const couponField = document.getElementById('coupon-code');
 
 
 makePurchase.addEventListener('click', function(){
-  // alert('congratulations! you have purchase the product')
+   
 })
 
 
@@ -16,7 +16,8 @@ function handleCLikBtn(target){
 
  const li = document.createElement("li");
  
- li.innerText = productName;
+ li.innerHTML = `${selectedItemContainer.childElementCount+1}. ${productName}`
+ li.classList.add("listStyleNone")
 
  selectedItemContainer.appendChild(li)
 
@@ -32,13 +33,18 @@ function handleCLikBtn(target){
 
 
  if(total>=0){
-  makePurchase.removeAttribute('disabled') || couponBtn.removeAttribute('disabled')
+  makePurchase.removeAttribute('disabled')
  }else{
-  makePurchase.setAttribute('disabled', 'true') || couponBtn.setAttribute('disabled', 'true')
+  makePurchase.setAttribute('disabled', 'true') 
+ }
+ if(total>=200){
+  couponBtn.removeAttribute('disabled')
+ }else{
+  couponBtn.setAttribute('disabled', 'true')
  }
  console.log(total)
- 
  couponBtn.addEventListener('click', function(){
+  
   const couponFieldValue = couponField.value;
   if(total>200 && couponFieldValue == "SELL200"){
     const discount= total*0.2;
@@ -46,6 +52,8 @@ function handleCLikBtn(target){
     document.getElementById('discount').innerText= discount.toFixed(2);
     const finalTotal = total- discount;
     document.getElementById('final-total').innerText= finalTotal.toFixed(2);
+  }else{ 
+    document.getElementById('final-total').innerText= total.toFixed(2);
   }
 })  
 

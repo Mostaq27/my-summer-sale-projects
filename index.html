@@ -6,9 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Summer Sale</title>
 
-  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./images/Summer 1.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .listStyleNone{
+      list-style: none;
+    }
+  </style>
 
 </head>
 
@@ -16,19 +22,19 @@
   <!-- -- banner section - -->
   <header class="bg-yellow-100 w-full py-36">
     <div class="banner grid grid-cols-2  px-40 gap-44 items-center ">
-      <div class=" mt-44 ">
-        <h1 class=" mb-5 text-center font-semibold">---SALE FEVER---</h1>
-        <p class="text-4xl font-bold mb-5">Purchase TK 200 or <br>above & get <span class="text-pink-500"> 20%
+      <div class=" mt-44 text-center">
+        <h1 class=" mb-5 text-xl font-semibold">---SALE FEVER---</h1>
+        <p class="text-4xl font-bold text-justify ml-24 mb-5">Purchase TK 200 or <br>above & get <span class="text-pink-500"> 20%
             off.</span>
         </p>
-        <div class="flex gap-2">
-          <p class=" mb-5 pt-2 text-center font-semibold">Use Promo Code</p>
+        <div class="flex gap-2 items-center">
+        <p class=" mb-5 pt-2 ml-36 text-xl font-semibold mt-5">Use Promo Code</p>
           <button
             class="btn btn-secondary bg-pink-500 w-auto h-8 mt-2 rounded-md text-xl text-white  font-semibold">SELL200</button>
         </div>
       </div>
       <div class="mt-20">
-        <img class="w-[100] lg:w-[70%] " src="./images/Summer 1.png" alt="">
+        <img class="w-[100] lg:w-[80%] " src="./images/Summer 1.png" alt="">
       </div>
     </div>
   </header>
@@ -64,7 +70,7 @@
   
             <!-- card two  -->
             <div onclick="handleCLikBtn(this)" class="card  bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
+              <figure class="px-10 pt-10 ">
                 <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
               </figure>
               <div class="card-body items-center text-center">
@@ -173,11 +179,11 @@
             <div class="join">
               <input class="input input-bordered join-item rounded-md " placeholder="coupon Code" id="coupon-code" />
               <button id="btn-apply" class="btn join-item rounded-md bg-pink-500 text-white font-semibold"
-                disabled>APPLY</button>
+                disabled>Apply</button>
             </div>
           </div>
           <div class="mt-10 mb-10 w-[342px] px-10 bg-base-100 shadow-x rounded-md">
-            <ol id="selected-items" class="font-semibold text-xl"></ol>
+            <div id="selected-items" class="font-semibold text-xl"></div>
             <div class="cart-box">
               <hr />
               <h6 class="font-semibold text-xl">Total Price: <span id="total">00</span></h6>
@@ -211,7 +217,7 @@
     </section>
    </main>
   
-
+   <script src="./js/button.js"></script>
   <script src="./js/index.js"></script>
 </body>
 
